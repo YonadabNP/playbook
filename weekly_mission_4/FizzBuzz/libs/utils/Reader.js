@@ -1,17 +1,17 @@
 const fs = require("fs");
 
 class Reader {
-  constructor() {}
+    constructor() {}
 
-  getInfo() {
-    return `Hey there!`;
-  }
+    getInfo() {
+        return `Hey there!`;
+    }
 
-  static readJsonFile(path) {
-    if (!path || path.length == 0) return "";
-    const rawdata = fs.readFileSync(path);
-    return JSON.parse(rawdata);
-  }
+    static readJsonFile(path) {
+        if (!path || path.length == 0) return "";
+        const rawdata = fs.readFileSync(path);
+        return JSON.parse(rawdata);
+    }
 }
 
 module.exports = Reader;
