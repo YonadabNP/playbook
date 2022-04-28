@@ -1,28 +1,28 @@
 class FizzbuzzService {
-  constructor() {}
+    constructor() {}
 
-  getInfo() {
-    return `Hey there!`;
-  }
+    getInfo() {
+        return `Hey there!`;
+    }
 
-  static applyValidationInExplorer(explorer) {
-    if(explorer.score%5 === 0 && explorer.score%3 === 0){
-        explorer.trick = "FIZZBUZZ";
-        return explorer;
+    static applyValidationInExplorer(explorer) {
+        if(explorer.score%5 === 0 && explorer.score%3 === 0){
+            explorer.trick = "FIZZBUZZ";
+            return explorer;
+        }
+        else if(explorer.score%3 === 0){
+            explorer.trick = "FIZZ";
+            return explorer;
+        }
+        else if(explorer.score%5 === 0){
+            explorer.trick = "BUZZ";
+            return explorer;
+        }
+        else{
+            explorer.trick = explorer.score;
+            return explorer;
+        }
     }
-    else if(explorer.score%3 === 0){
-        explorer.trick = "FIZZ";
-        return explorer;
-    }
-    else if(explorer.score%5 === 0){
-        explorer.trick = "BUZZ";
-        return explorer;
-    }
-    else{
-        explorer.trick = explorer.score;
-        return explorer;
-    }
-  }
 }
 
 module.exports = FizzbuzzService;
