@@ -35,3 +35,11 @@ app.get("/v1/explorers/usernames/:mission",(request, response) =>
     response.json(explorersInMission);
 }
 );
+
+app.get("/v1/fizzbuzz/:score",(request, response) =>
+{
+    const score = request.params.score;
+    const result = ExplorerController.applyValidationInNumber(score);
+    response.json(result);
+}
+);

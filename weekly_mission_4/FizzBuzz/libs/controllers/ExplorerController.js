@@ -1,6 +1,6 @@
 const Reader = require("./../../libs/utils/Reader");
 const ExplorerService = require("./../../libs/services/ExplorerService");
-//const FizzbuzzService = require("./../../libs/services/FizzbuzzService");
+const FizzbuzzService = require("./../../libs/services/FizzbuzzService");
 
 class ExplorerController {
     constructor() {}
@@ -20,7 +20,9 @@ class ExplorerController {
         return ExplorerService.getAmountOfExplorersByMission(explorers, mission);
     }
 
-    
+    static applyValidationInNumber(score) {
+        return FizzbuzzService.applyValidationInNumber(score);
+    }    
 }
 
 module.exports = ExplorerController;

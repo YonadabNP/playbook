@@ -1,10 +1,6 @@
 class FizzbuzzService {
     constructor() {}
 
-    getInfo() {
-        return `Hey there!`;
-    }
-
     static applyValidationInExplorer(explorer) {
         if(explorer.score%5 === 0 && explorer.score%3 === 0){
             explorer.trick = "FIZZBUZZ";
@@ -21,6 +17,21 @@ class FizzbuzzService {
         else{
             explorer.trick = explorer.score;
             return explorer;
+        }
+    }
+
+    static applyValidationInNumber(score){
+        if(score%5 === 0 && score%3 === 0){
+            return "FIZZBUZZ";
+        }
+        else if(score%3 === 0){
+            return  "FIZZ";
+        }
+        else if(score%5 === 0){
+            return "BUZZ";
+        }
+        else{
+            return score;
         }
     }
 }
